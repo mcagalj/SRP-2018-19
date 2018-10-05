@@ -1,5 +1,6 @@
 # **Sigurnost računala i podataka - Lab 1**
 
+<!-- markdownlint-disable MD007 -->
 <!-- TOC -->
 
 - [**Sigurnost računala i podataka - Lab 1**](#sigurnost-ra%C4%8Dunala-i-podataka---lab-1)
@@ -16,6 +17,7 @@
             - [`pip` and Requirements file](#pip-and-requirements-file)
 
 <!-- /TOC -->
+<!-- markdownlint-disable MD007-->
 
 ## Python crash course
 
@@ -23,7 +25,7 @@ U okviru uvodne vježbe student će postaviti i testirati (virtualno) okruženje
 
 ### Instaliranje virtualnog okruženja
 
-Virtualna okruženja koriste se _izolaciju_ Python projekata u vlastita okruženja. Izoliranjem projekata u vlastita virtualna okruženja izbjegavate potencijalne konfliktne zahtjeve različitih projektata.
+Virtualna okruženja koriste se _izolaciju_ Python projekata u vlastita okruženja. Izoliranjem projekata u vlastita virtualna okruženja izbjegavate potencijalne konfliktne zahtjeve različitih projekata.
 
 Npr., ako projekt A koristi jednu verziju odgovarajućeg modula ili paketa (npr. `cryptography 1.8`) a projekt B drugu verziju (npr. `cryptography 2.3`) tog modula, nije moguće istovremeno zadovoljiti oba zahtjeva ukoliko aplikacije dijele isto okruženje; globalno možete instalirati samo jednu ili drugu verziju paketa `cryptography`. S druge strane, izoliranjem projekata u vlastita okruženja, možete istovremeno zadovoljiti zahtjeve oba projekta.
 
@@ -192,7 +194,7 @@ say(name=DEFAULT_NAME)
 
 #### Moduli kao Python skripte ili što predstavlja `if __name__ == '__main__':`
 
-U prethodnom primjeru smo najprije kreairali modul `speak` da bi mogli pozivati funkcije iz modula `speak.py`. Python moduli su zapravo samo obične Python skripte pa ih kao takve i možemo izravno pozivati/izvršavati (ne moramo ih nužno uvoditi u posebnu skriptu - putem `import speak`).
+U prethodnom primjeru smo kreirali modul `speak` s ciljem korištenja istog unutar drugih Python skripti. Python moduli su zapravo samo obične Python skripte pa ih kao takve možemo i izravno pozivati/izvršavati (ne moramo ih nužno uvoditi u posebnu skriptu - `import speak`). Dakle, pozivanje modula kao skripte kako je prikazano u nastavku sasvim je legitimno u Pythonu.
 
 ```shell
 python speak.py
@@ -217,7 +219,7 @@ if __name__ == '__main__':
     hello()
 ```
 
-Kada modul koristite izravno kao samostalnu skriptu, odnosno kada ga pozivate kao `python speak.py`, Python interpreter postavlja specijalnu varijablu `__name__` u vrijednost `__main__`. S druge strane, kada isti modul uvozite u drugu skriptu, vrijednost varijable `__name__` postaje ime tog modula. Na ovaj način znate je li modul korište izravno ili je uvezen u drugu skriptu i shodno tome izvršiti ili ne izvršiti nekakvu logiku. Ovo je npr. korisno kada radite testove za modul. Testove naravno ne želite izvršavati prilikom korištenja modula unutar drugih skripti.
+Kada modul koristite izravno kao samostalnu skriptu, odnosno kada ga pozivate kao `python speak.py`, Python interpreter postavlja specijalnu varijablu `__name__` u vrijednost `__main__`. S druge strane, kada isti modul uvozite u drugu skriptu, vrijednost varijable `__name__` postaje ime tog modula. Na ovaj način znate je li modul korište izravno ili je uvezen u drugu skriptu i shodno tome možete izvršiti ili ne izvršiti odgovarajuću logiku. Ovo je npr. korisno kada radite testove za modul. Testove naravno ne želite izvršavati prilikom korištenja modula unutar drugih skripti.
 
 Usporedite rezultate izvršavanja Python skripti u nastavku.
 
