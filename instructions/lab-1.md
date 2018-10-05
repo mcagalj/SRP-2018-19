@@ -1,29 +1,23 @@
-# **Sigurnost računala i podataka - Lab 1**
+# SRP - Lab 1: Python crash course <!-- omit in toc -->
 
 <!-- markdownlint-disable MD007 -->
-<!-- TOC -->
 
-- [**Sigurnost računala i podataka - Lab 1**](#sigurnost-ra%C4%8Dunala-i-podataka---lab-1)
-    - [Python crash course](#python-crash-course)
-        - [Instaliranje virtualnog okruženja](#instaliranje-virtualnog-okru%C5%BEenja)
-        - [Python basics](#python-basics)
-            - [Hello, World](#hello-world)
-            - [Functions](#functions)
-        - [Python modules](#python-modules)
-            - [Kreiranje jednostavnog modula](#kreiranje-jednostavnog-modula)
-            - [Moduli kao Python skripte ili što predstavlja `if __name__ == '__main__':`](#moduli-kao-python-skripte-ili-%C5%A1to-predstavlja-if-name--main)
-        - [Python packages](#python-packages)
-            - [Package manager `pip`](#package-manager-pip)
-            - [`pip` and Requirements file](#pip-and-requirements-file)
+- [Instaliranje virtualnog okruženja](#instaliranje-virtualnog-okruženja)
+- [Python basics](#python-basics)
+    - [Hello, World](#hello-world)
+    - [Functions](#functions)
+- [Python modules](#python-modules)
+    - [Kreiranje jednostavnog modula](#kreiranje-jednostavnog-modula)
+    - [Moduli kao Python skripte](#moduli-kao-python-skripte)
+- [Python packages](#python-packages)
+    - [Package manager `pip`](#package-manager-pip)
+    - [The Requirements file](#the-requirements-file)
 
-<!-- /TOC -->
-<!-- markdownlint-disable MD007-->
-
-## Python crash course
+<!-- markdownlint-disable MD07 -->
 
 U okviru uvodne vježbe student će postaviti i testirati (virtualno) okruženje za razvoj Python aplikacija. Također će se upoznati s važnim konceptima Python jezika (relevantnim za laboratorijske vježbe) kao što su definicija funkcija, upravljanje modulima i paketima, rad sa stringovima i dr.
 
-### Instaliranje virtualnog okruženja
+## Instaliranje virtualnog okruženja
 
 Virtualna okruženja koriste se _izolaciju_ Python projekata u vlastita okruženja. Izoliranjem projekata u vlastita virtualna okruženja izbjegavate potencijalne konfliktne zahtjeve različitih projekata.
 
@@ -33,13 +27,15 @@ U okviru labova, student će kreirati vlastito virtualno okruženje kako je prik
 
 1. Provjerite imate li instaliran Python 3 na vašem računalu; u terminalu izvršite `python --version`. Predlažemo da koristite terminal unutar editora _Visual Studio Code_ (VSC).
 
-   **VAŽNO:** U VSC editoru postavite `cmd` terminal kao zadani terminal (_default shell_), umjesto `powershell` terminala. Kako to napraviti? [Stack Overflow](https://stackoverflow.com/a/43751743).
+   > **NAPOMENA:**  
+   > U VSC editoru postavite `cmd` terminal kao zadani terminal (_default shell_), umjesto `powershell` terminala. Kako to napraviti? [Stack Overflow](https://stackoverflow.com/a/43751743).
 
 2. U terminalu uđite u direktorij u kojem ćete kreirati virtualno okruženje za svoj projekt. Predlažemo da svi studenti kreiraju okruženja u direktoriju: **`C:\Users\A507\SRP`**.
 
 3. Uđite u navedeni direktorij (ili ga kreirajte ako ne postoji) i kreirajte vlastito virtualno okruženje izvršavanjem naredbe u nastvaku.
 
-   **VAŽNO:** Virtualno okruženje nazovite svojim imenom, npr. `mcagalj`.
+   > **NAPOMENA:**  
+   > Virtualno okruženje nazovite svojim imenom, npr. `mcagalj`.
 
    ```bash
    C:\Users\A507\SRP>python -m venv mcagalj
@@ -55,9 +51,9 @@ U okviru labova, student će kreirati vlastito virtualno okruženje kako je prik
 
 Čestitamo na uspješno postavljenom virtualnom okruženju!
 
-### Python basics
+## Python basics
 
-#### Hello, World
+### Hello, World
 
 ```python
 print("Hello, FESB!")
@@ -73,7 +69,7 @@ print("Hello, {}".format(name))
 print(f"Hello, {name}!")
 ```
 
-#### Functions
+### Functions
 
 1. Simple one
 
@@ -125,9 +121,9 @@ print(f"Hello, {name}!")
        return ciphertext
    ```
 
-### Python modules
+## Python modules
 
-#### Kreiranje jednostavnog modula
+### Kreiranje jednostavnog modula
 
 Pohranimo prethodne funkcije u datoteku `speak.py`:
 
@@ -192,7 +188,9 @@ or
 say(name=DEFAULT_NAME)
 ```
 
-#### Moduli kao Python skripte ili što predstavlja `if __name__ == '__main__':`
+### Moduli kao Python skripte
+
+**Što predstavlja uvjet `if __name__ == '__main__':` kojeg često nalazimo u Python modulima?**
 
 U prethodnom primjeru kreirali smo modul `speak` s ciljem korištenja istog unutar drugih Python skripti. Python moduli su zapravo samo obične Python skripte pa ih kao takve možemo i izravno pozivati/izvršavati (ne moramo ih nužno uvoditi u posebnu skriptu - `import speak`). Dakle, pozivanje modula kao skripte kako je prikazano u nastavku sasvim je legitimno u Pythonu.
 
@@ -244,13 +242,13 @@ Usporedite rezultate izvršavanja Python skripti u nastavku.
    python speak_FESB.py
    ```
 
-### Python packages
+## Python packages
 
 Python paketi (eng. _package_) služe za grupiranje i strukturiranje više povezanih modula u jednu cjelinu. U osnovi, Python paket je skup datoteka pohranjenih i organiziranih u zajednički direktorij. Standardna Python-ova biblioteka ([_The Python Standard Library_](https://docs.python.org/3/library/)) uključuje brojne korisne module i pakete koji su pisani u C ili Python jeziku.
 
 Module i pakete koji nisu dio standardne biblioteke možete instalirati pomoću odgovarajućih upravitelja paketima. Popularan alat za instalaciju Python paketa je `pip`, a popularan repozitorij s Python paketima je [Python Package Index (PyPI)](https://pypi.org/).
 
-#### Package manager `pip`
+### Package manager `pip`
 
 U okviru laboratorijskih vježbi, za potrebe rada s kriptografskim primitivima (enkripcijskim algoritmima, kriptografskim _hash_ funkcijama, i dr.) koristiti ćemo Python paket [`cryptography`](https://pypi.org/project/cryptography/).
 
@@ -300,7 +298,7 @@ Za više informacija o instaliranom paketu izvršite naredbu `pip show <ime_pake
 Ciphertext: b'gAAAAABbtx7LWMixhxgjbpcPF7KOszxbfLuK1lwLg1PYTizsrHnCI2B8NluKaHos5WsUkKfOyjWaD80ogmBlSI8kYjo8edlyGz5wn6fin1QpirGLBDSEVSpzecqfdPCS1PgF-KHME4H3'
 ```
 
-#### `pip` and Requirements file
+### The Requirements file
 
 Zamislite situaciju u kojoj u projektu koristite više vanjskih modula koje ste pojedinačno instalirali (`pip install module_A`, `pip install module_B`, ...). Želite svoj projekt poslati prijatelju koji nema instalirane potrebne module te ih treba instalirati. Ako vaš projekt koristi veliki broj paketa/modula (> 10), pojedinačna instalacija istih biti će jako destimulirajuća za vašeg prijatelja.
 
