@@ -194,13 +194,13 @@ say(name=DEFAULT_NAME)
 
 #### Moduli kao Python skripte ili što predstavlja `if __name__ == '__main__':`
 
-U prethodnom primjeru smo kreirali modul `speak` s ciljem korištenja istog unutar drugih Python skripti. Python moduli su zapravo samo obične Python skripte pa ih kao takve možemo i izravno pozivati/izvršavati (ne moramo ih nužno uvoditi u posebnu skriptu - `import speak`). Dakle, pozivanje modula kao skripte kako je prikazano u nastavku sasvim je legitimno u Pythonu.
+U prethodnom primjeru kreirali smo modul `speak` s ciljem korištenja istog unutar drugih Python skripti. Python moduli su zapravo samo obične Python skripte pa ih kao takve možemo i izravno pozivati/izvršavati (ne moramo ih nužno uvoditi u posebnu skriptu - `import speak`). Dakle, pozivanje modula kao skripte kako je prikazano u nastavku sasvim je legitimno u Pythonu.
 
 ```shell
 python speak.py
 ```
 
-Često u modulima možemo naći sljedeći kondicionalni izraz: `if __name__ == '__main__':`. Definirajmo modul `speak` kako slijedi:
+Često u modulima možemo naći sljedeći kondicionalni izraz: `if __name__ == '__main__':`. U nastavku ćemo objasniti značenje istog. Definirajmo modul `speak` kako slijedi:
 
 ```python
 # File "speak.py"
@@ -286,13 +286,13 @@ Traceback (most recent call last):
 ModuleNotFoundError: No module named 'cryptography'
 ```
 
-Očigledno nemamo instaliran traženi modul/paket na lokalnom računalu, pa ga trebamo instalirati. To možemo napraviti korištenjem alata **`pip`** kako je prikazano u nastavku:
+Očigledno nemamo instaliran traženi paket `cryptography` na lokalnom računalu. Preciznije, željeni paket nije instaliran u našem virtualnom okruženju `(mcagalj)`. To možemo napraviti korištenjem alata **`pip`** kako je prikazano u nastavku:
 
 ```shell
-pip install cryptography
+(mcagalj) C:\Your\folder>pip install cryptography
 ```
 
-Ako želite više informacija o instaliranom paketu možete koristiti `pip show <ime_paketa>`. Pokušajmo ponovo izvršiti našu skriptu. Voila!
+Za više informacija o instaliranom paketu izvršite naredbu `pip show <ime_paketa>`. Pokušajmo ponovo izvršiti našu skriptu. Voila!
 
 ```shell
 (mcagalj) C:\Your\folder>python package_test.py
