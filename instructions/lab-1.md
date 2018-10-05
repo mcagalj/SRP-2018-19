@@ -286,13 +286,13 @@ Traceback (most recent call last):
 ModuleNotFoundError: No module named 'cryptography'
 ```
 
-Očigledno nemamo instaliran traženi modul/paket na lokalnom računalu, pa ga trebamo instalirati. To možemo napraviti korištenjem alata **`pip`** kako je prikazano u nastavku:
+Očigledno nemamo instaliran modul/paket `cryptography` na lokalnom računalu. Preciznije, modul nije instaliran u virtualnom okruženju `(mcagalj)`. Željeni modul možemo instalirati korištenjem alata **`pip`** kako je prikazano u nastavku:
 
 ```shell
 pip install cryptography
 ```
 
-Ako želite više informacija o instaliranom paketu možete koristiti `pip show <ime_paketa>`. Pokušajmo ponovo izvršiti našu skriptu. Voila!
+Za više informacija o instaliranom paketu možete koristiti `pip show <ime_paketa>`. Pokušajmo ponovo izvršiti našu skriptu. Voila!
 
 ```shell
 (mcagalj) C:\Your\folder>python package_test.py
