@@ -46,7 +46,7 @@ U okviru labova, student će kreirati vlastito virtualno okruženje kako je prik
 5. Aktiviranjem vašeg virtualnog okruženja _command prompt_ se mijenja kako je prikazano u nastavku (naravno, vaše okruženje nosi drugačije ime):
 
    ```bash
-   (mcagalj) C:\Users\A507\SRP>mcagalj
+   (mcagalj) C:\Users\A507\SRP\mcagalj>
    ```
 
 Čestitamo na uspješno postavljenom virtualnom okruženju!
@@ -62,9 +62,11 @@ print("Hello, FESB!")
 
 '''
 This a multiline comment.
-Let us define a variable name.
+Let us define a new variable "name".
 '''
 name = "FESB"
+
+# Let's print something
 print("Hello, {}".format(name))
 print(f"Hello, {name}!")
 ```
@@ -118,6 +120,7 @@ print(f"Hello, {name}!")
        encryptor = cipher.encryptor()
        ciphertext = encryptor.update(plaintext)
        ciphertext += encryptor.finalize()
+
        return ciphertext
    ```
 
