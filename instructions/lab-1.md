@@ -1,5 +1,22 @@
 # **Sigurnost računala i podataka - Lab 1**
 
+<!-- TOC -->
+
+- [**Sigurnost računala i podataka - Lab 1**](#sigurnost-ra%C4%8Dunala-i-podataka---lab-1)
+    - [Python crash course](#python-crash-course)
+        - [Instaliranje virtualnog okruženja](#instaliranje-virtualnog-okru%C5%BEenja)
+        - [Python basics](#python-basics)
+            - [Hello, World](#hello-world)
+            - [Functions](#functions)
+        - [Python modules](#python-modules)
+            - [Kreiranje jednostavnog modula](#kreiranje-jednostavnog-modula)
+            - [Moduli kao Python skripte ili što predstavlja `if __name__ == '__main__':`](#moduli-kao-python-skripte-ili-%C5%A1to-predstavlja-if-name--main)
+        - [Python packages](#python-packages)
+            - [Package manager `pip`](#package-manager-pip)
+            - [`pip` and Requirements file](#pip-and-requirements-file)
+
+<!-- /TOC -->
+
 ## Python crash course
 
 U okviru uvodne vježbe student će postaviti i testirati (virtualno) okruženje za razvoj Python aplikacija. Također će se upoznati s važnim konceptima Python jezika (relevantnim za laboratorijske vježbe) kao što su definicija funkcija, upravljanje modulima i paketima, rad sa stringovima i dr.
