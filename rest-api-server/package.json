@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "SET DEBUG=rest-server:* & nodemon ./bin/server"
+    "dev": "SET DEBUG=rest-server:* & nodemon ./bin/server"
   },
   "dependencies": {
     "ajv": "^6.5.4",
@@ -14,7 +14,9 @@
     "express": "^4.16.4",
     "jsonwebtoken": "^8.3.0",
     "morgan": "^1.9.1",
-    "nodemon": "^1.18.7",
     "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
   }
 }
