@@ -1,0 +1,15 @@
+{
+  "name": "fesb-rbac",
+  "version": "0.1.0",
+  "description": "a simple Role-Based Access Control module for teaching (inspired by easy-rbac)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "MC <mario.cagalj@fesb.hr>",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "express-rest-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "SET DEBUG=rest-server:* & nodemon ./bin/server"
+  },
+  "dependencies": {
+    "ajv": "^6.5.4",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.4",
+    "debug": "^4.1.0",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.3.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.7",
+    "uuid": "^3.3.2"
+  }
+}
