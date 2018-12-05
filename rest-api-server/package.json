@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "SET DEBUG=rest-server:* & nodemon ./bin/server"
+    "start": "SET DEBUG=rest-server:* & nodemon ./bin/server"
   },
   "dependencies": {
     "ajv": "^6.5.4",
