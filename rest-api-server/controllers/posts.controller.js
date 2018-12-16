@@ -33,9 +33,11 @@ exports.get_post = (req, res) => {
 // Add a new post to the store
 //---------------------------------------
 exports.add_post = async (req, res) => {
-  const { title, content, author } = req.body;
+  const { title, content } = req.body;
 
-  // TBD: check if the author exists in the store
+  // Get the author from the token
+  const { id: author } = req.user;
+
   const post = new Post({
     title,
     content,
@@ -54,7 +56,6 @@ exports.add_post = async (req, res) => {
 exports.update_post = async (req, res) => {
   const { postID } = req.params;
   const { _posts: posts } = req;
-  // const posts = store.get("posts");
 
   // Does the requested post exist
   if (!posts.has(postID)) {
