@@ -3,10 +3,9 @@ exports.add_post = {
   type: "object",
   properties: {
     title: { type: "string" },
-    content: { type: "string" },
-    author: { type: "string" }
+    content: { type: "string" }
   },
-  required: ["title", "content", "author"]
+  required: ["title", "content"]
 };
 
 exports.update_post = {

@@ -11,6 +11,9 @@ const auth = async (req, res, next) => {
     // Expose the verified user to subsequent middleware and route handlers
     req.user = token;
 
+    debug("Token valid");
+    debug(token);
+
     return next();
   } catch (error) {
     debug(error);
