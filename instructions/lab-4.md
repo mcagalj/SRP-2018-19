@@ -40,3 +40,5 @@ Za provedbu vježbi, koristit ćemo JavaScript jezik odnosno [Node.js](https://n
 Za potrebe vježbi koristit ćemo REST klijent [Insomnia](https://insomnia.rest/). REST klijent se koristi za testiranje REST servisa. Instalirajte navedeni klijent prema uputama na web stranicama klijenta.
 
 > Alternativno možete koristiti popularni REST klijent [Postman](https://www.getpostman.com/). Za ljubitelje terminala i komandne linije još jedna alternativa je iznimno popularni [curl](https://curl.haxx.se/).
+
+**NAPOMENA:** U direktoriju `insomnia` možete naći datoteku (u `json` formatu) s primjerima HTTP zahtjeva u Insomnia-i. Navedenu datoteku možete uvesti u svoju verziju Insomnia klijenta i na taj način koristiti unaprijed pripremljene primjere HTTP zahtjeva. Navedeni primjeri pripremljeni su na način da automatiziraju pohranu autentikacijskih tokena, korisničkih identiteta, identiteta postova. Na ovaj način iste ne trebate ručno kopirati, čime znatno ubrzavate testove sa serverom.
